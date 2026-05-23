@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us & Submit Listing | Tuli Ma Property Brokers | Lusaka Real Estate</title>
+    
+    <meta name="description" content="Contact Lusaka's elite real estate agency. Submit your property photos and listing details to sell with us, or book physical viewing events." />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+    <!-- Tailwind Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                green: '#123C2A',
+                gold: '#C5A880',
+                goldHover: '#B0946E',
+                charcoal: '#1A1A1A',
+                cream: '#FAF8F5',
+                white: '#FFFFFF',
+              }
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              display: ['Playfair Display', 'serif'],
+            }
+          }
+        }
+      }
+    </script>
+    
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body class="bg-brand-cream text-brand-charcoal">
+
+    <!-- Preloader -->
+    <div id="site-loader">
+      <div class="flex flex-col items-center">
+        <h2 class="text-3xl font-display font-semibold text-amber-400 tracking-wide mb-3">Tuli Ma</h2>
+        <p class="text-neutral-400 text-xs tracking-widest uppercase mb-6">Property Brokers</p>
+        <div class="w-12 h-12 border-4 border-amber-400/20 border-t-amber-400 rounded-full animate-spin"></div>
+      </div>
+    </div>
+
+    <!-- Sticky Header -->
+    <header class="fixed top-0 left-0 w-full z-40 bg-[#123C2A] py-4 shadow-md">
+      <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+        <a href="index.html" class="flex flex-col justify-center">
+          <h1 class="text-2xl font-display font-bold text-amber-400 tracking-wide leading-none">Tuli Ma</h1>
+          <span class="text-[9px] font-mono tracking-widest text-emerald-200 uppercase mt-1">Property Brokers</span>
+        </a>
+
+        <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold tracking-wider uppercase text-neutral-200">
+          <a href="index.html" class="hover:text-amber-400 transition-colors hover-border-gold">Home</a>
+          <a href="buy.html" class="hover:text-amber-400 transition-colors hover-border-gold">Buy</a>
+          <a href="rent.html" class="hover:text-amber-400 transition-colors hover-border-gold">Rent</a>
+          <a href="sale.html" class="hover:text-amber-400 transition-colors hover-border-gold">List With Us</a>
+          <a href="listings.html" class="hover:text-amber-400 transition-colors hover-border-gold">All Listings</a>
+          <a href="about.html" class="hover:text-amber-400 transition-colors hover-border-gold">About</a>
+          <a href="contact.html" class="text-amber-400 transition-colors">Contact</a>
+        </nav>
+
+        <div class="hidden lg:flex items-center gap-4">
+          <a href="tel:+260979894567" class="text-xs font-mono font-semibold tracking-wider text-amber-300 hover:text-white transition-colors">+260 97 9894567</a>
+          <a href="contact.html" class="bg-amber-400 hover:bg-amber-500 text-brand-green px-5 py-2.5 rounded text-xs font-bold tracking-wider uppercase transition-all shadow-md">Schedule Valuation</a>
+        </div>
+
+        <button id="mobile-menu-btn" class="lg:hidden text-white hover:text-amber-400 focus:outline-none" aria-label="Toggle Menu">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Mobile Menu Drawer -->
+    <div id="mobile-menu" class="fixed top-0 right-0 h-full w-4/5 max-w-sm z-50 bg-[#0F291E] shadow-2xl p-8 flex flex-col justify-between">
+      <div>
+        <div class="flex items-center justify-between border-b border-green-800/50 pb-6 mb-8">
+          <div class="flex flex-col">
+            <h2 class="text-2xl font-display font-bold text-amber-400 leading-none">Tuli Ma</h2>
+            <span class="text-[9px] font-mono tracking-widest text-emerald-300 uppercase mt-1">Property Brokers</span>
+          </div>
+          <button id="mobile-menu-close" class="text-neutral-400 hover:text-white focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>
+          </button>
+        </div>
+        <nav class="flex flex-col gap-6 text-sm font-semibold tracking-widest uppercase text-neutral-300">
+          <a href="index.html" class="hover:text-amber-400 transition-colors">Home</a>
+          <a href="buy.html" class="hover:text-amber-400 transition-colors">Buy Property</a>
+          <a href="rent.html" class="hover:text-amber-400 transition-colors">Rent Property</a>
+          <a href="sale.html" class="hover:text-amber-400 transition-colors">List Your Property</a>
+          <a href="listings.html" class="hover:text-amber-400 transition-colors">Browse Listings</a>
+          <a href="about.html" class="hover:text-amber-400 transition-colors">About Brokerage</a>
+          <a href="contact.html" class="text-amber-400">Contact Us</a>
+        </nav>
+      </div>
+      <div class="border-t border-green-800/50 pt-8">
+        <p class="text-xs text-neutral-400 leading-relaxed mb-4">"Right Place, Right Time, All The Time."</p>
+        <a href="tel:+260979894567" class="text-sm font-mono text-amber-400 font-bold block mb-2">+260 97 9894567</a>
+        <a href="contact.html" class="w-full block bg-amber-400 hover:bg-amber-500 text-brand-green text-center py-3 rounded text-xs font-bold tracking-widest uppercase transition-slots shadow-md">List Your Property</a>
+      </div>
+    </div>
+
+    <main class="pt-[72px]">
+      
+      <!-- Page Banner -->
+      <section class="bg-brand-green text-white py-16 md:py-20 relative overflow-hidden animate-fade-in">
+        <div class="absolute inset-0 opacity-15">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Zambian concierge office background" class="w-full h-full object-cover">
+        </div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
+          <span class="text-amber-400 text-xs tracking-widest uppercase font-mono block mb-3">Concierge Desk</span>
+          <h1 class="text-3xl md:text-5xl font-display font-medium max-w-2xl mx-auto leading-tight mb-3">Connect With Tuli Ma</h1>
+          <p class="text-neutral-300 max-w-md mx-auto text-xs md:text-sm font-light">Book property viewings, submit list requests, upload blueprints, or consult directly with Mr. Chabuka.</p>
+        </div>
+      </section>
+
+      <!-- Contact Info Cards Panel -->
+      <section class="py-12 bg-[#FAF8F5] border-b border-neutral-200">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Card 1: WhatsApp Helpline -->
+            <a href="https://wa.me/260979894567?text=Hello%20Tuli%2520Ma!%20I%20am%20inquiring%20about%20Zambian%20property%20listings." target="_blank" class="bg-white border border-neutral-200 hover:border-emerald-500 p-6 shadow-sm rounded flex items-start gap-4 transition-all duration-300 group">
+              <div class="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.73-1.45L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.966-1.862-1.865-4.343-2.891-6.977-2.892-5.438 0-9.866 4.372-9.87 9.8.001 1.748.479 3.456 1.388 4.965L1.874 21.9l4.773-1.746z"/></svg>
+              </div>
+              <div>
+                <span class="text-[10px] text-neutral-400 uppercase tracking-widest font-mono font-bold block mb-1">WhatsApp & Call</span>
+                <span class="text-md font-bold text-slate-950 block hover:text-emerald-600 transition-colors">+260 97 9894567</span>
+                <p class="text-xs text-neutral-500 mt-1">Ready for text/voice queries 24/7.</p>
+              </div>
+            </a>
+
+            <!-- Card 2: Strategic Mailboxes -->
+            <div class="bg-white border border-neutral-200 p-6 shadow-sm rounded flex items-start gap-4">
+              <div class="w-12 h-12 bg-amber-50 text-amber-600 rounded-full flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+              </div>
+              <div class="overflow-hidden">
+                <span class="text-[10px] text-neutral-400 uppercase tracking-widest font-mono font-bold block mb-1">Electronic Mails</span>
+                <a href="mailto:info@tulimapropertybrokers.com" class="text-xs font-bold text-slate-900 block truncate hover:underline">info@tulimapropertybrokers.com</a>
+                <a href="mailto:kaseya@tulimapropertybrokers.com" class="text-xs font-bold text-neutral-500 block truncate mt-1 hover:underline">kaseya@tulimapropertybrokers.com</a>
+              </div>
+            </div>
+
+            <!-- Card 3: Lusaka Office Address -->
+            <div class="bg-white border border-neutral-200 p-6 shadow-sm rounded flex items-start gap-4">
+              <div class="w-12 h-12 bg-emerald-50 text-brand-green rounded-full flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+              </div>
+              <div>
+                <span class="text-[10px] text-neutral-400 uppercase tracking-widest font-mono font-bold block mb-1">HQ Suburb location</span>
+                <span class="text-xs font-bold text-slate-950 block">Corner of Chindo & Kabulonga Rd,</span>
+                <span class="text-xs text-neutral-500 block mt-0.5">Kabulonga Suburb, Lusaka, Zambia</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Duel Forms Module Grid -->
+      <section class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+            
+            <!-- Left Panel: General Viewing booking Contacts -->
+            <div class="lg:col-span-5">
+              <div class="bg-neutral-50 border border-neutral-200 p-8 rounded shadow-md relative">
+                
+                <!-- Success Success Alert -->
+                <div id="form-success-overlay" class="absolute inset-0 bg-brand-green text-center text-white p-8 rounded flex flex-col items-center justify-center hidden z-20">
+                  <svg class="w-16 h-16 text-amber-400 mb-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                  <h3 class="text-2xl font-display font-semibold mb-2">Message Received</h3>
+                  <p class="text-xs text-neutral-300 leading-relaxed max-w-xs mb-6">Thank you. Your viewing appointment or consulting request has been channeled. Our officers Phiri or Chabuka will call back within 2 hours.</p>
+                  <button id="close-overlay-btn" class="bg-amber-400 hover:bg-amber-500 text-brand-green px-6 py-2 rounded text-xs font-bold uppercase tracking-wider transition-colors focus:outline-none">Close Overlay</button>
+                </div>
+
+                <span class="text-[#123C2A] font-bold text-xs uppercase tracking-widest font-mono block mb-2">Book Viewings / Consult</span>
+                <h3 class="text-2xl font-display font-semibold text-[#123C2A] mb-6">General Inquiry Desk</h3>
+                
+                <form id="booking-contact-form" action="https://formsubmit.co/info@tulimapropertybrokers.com" method="POST" class="space-y-4">
+                  <!-- FormSubmit anti-spam configuration hidden values -->
+                  <input type="hidden" name="_subject" value="Tuli Ma Website - New General Viewing Request">
+                  <input type="hidden" name="_captcha" value="false">
+
+                  <div>
+                    <label class="block text-xs font-bold text-neutral-500 uppercase tracking-widest mb-1">Full Name</label>
+                    <input type="text" name="Full Name" required placeholder="Mr. / Mrs. John Banda" class="w-full bg-white border border-neutral-300 p-3 rounded text-sm text-neutral-800 placeholder-neutral-400 focus:outline-none focus:border-brand-green">
+                  </div>
+
+                  <div class="grid grid-cols-2 gap-4">
+                    <div>
+                      <label class="block text-xs font-bold text-neutral-500 uppercase tracking-widest mb-1">Phone (or WA)</label>
+                      <input type="tel" name="Phone Number" required placeholder="+260 97 ..." class="w-full bg-white border border-neutral-300 p-3 rounded text-sm text-neutral-800 placeholder-neutral-400 focus:outline-none focus:border-brand-green">
+                    </div>
+                    <div>
+                      <label class="block text-xs font-bold text-neutral-500 uppercase tracking-widest mb-1">Email Address</label>
+                      <input type="email" name="Email Address" required placeholder="john@example.com" class="w-full bg-white border border-neutral-300 p-3 rounded text-sm text-neutral-800 placeholder-neutral-400 focus:outline-none focus:border-brand-green">
+                    </div>
+                  </div>
+
+                  <div>
+                    <label class="block text-xs font-bold text-neutral-500 uppercase tracking-widest mb-1">Select Subject</label>
+                    <select id="form-subject-select" name="Message Subject" class="w-full bg-white border border-neutral-300 p-3 rounded text-sm text-neutral-700 focus:outline-none focus:border-brand-green">
+                      <option value="Schedule Viewing">Schedule Property Viewing Tour</option>
+                      <option value="Request Valuation">Request Free Property Valuation</option>
+                      <option value="Mortgage Consultation">Mortgage / Banking Consultation</option>
+                      <option value="Customary Land Acquisition">Sourcing Raw Land Holdings</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label class="block text-xs font-bold text-neutral-500 uppercase tracking-widest mb-1">Notes / Description</label>
+                    <textarea id="property-descr-field" name="Client Notes" rows="5" required placeholder="Describe your buying parameters or reference standard listing IDs here..." class="w-full bg-white border border-neutral-300 p-3 rounded text-sm text-neutral-800 placeholder-neutral-400 focus:outline-none focus:border-brand-green leading-relaxed"></textarea>
+                  </div>
+
+                  <button type="submit" class="w-full bg-brand-green hover:bg-neutral-900 border border-brand-green hover:border-neutral-900 text-amber-100 text-xs font-bold tracking-widest uppercase py-4 rounded text-center transition-colors shadow focus:outline-none">
+                    Submit Inquiry Form
+                  </button>
+                </form>
+
+              </div>
+            </div>
+
+            <!-- Right Panel: Comprehensive Owner Submission/Listing Form -->
+            <div class="lg:col-span-7">
+              <div class="bg-neutral-50 border border-neutral-200 p-8 rounded shadow-md relative">
+                
+                <!-- Success Success Alert -->
+                <div id="owner-success-overlay" class="absolute inset-0 bg-brand-green text-center text-white p-8 rounded flex flex-col items-center justify-center hidden z-20">
+                  <svg class="w-16 h-16 text-amber-400 mb-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                  <h3 class="text-2xl font-display font-semibold mb-2">Listing Draft Submitted</h3>
+                  <p class="text-xs text-neutral-300 leading-relaxed max-w-sm mb-6">Your property listing draft and photographs have been successfully queued for appraisal. Principal Broker Mr. Chabuka will phone to organize a physical layout inspection within 12 hours.</p>
+                  <button id="close-owner-overlay-btn" class="bg-amber-400 hover:bg-amber-500 text-brand-green px-6 py-2 rounded text-xs font-bold uppercase tracking-wider transition-colors focus:outline-none">Close Overlay</button>
+                </div>
+
+                <span class="text-[#123C2A] font-bold text-xs uppercase tracking-widest font-mono block mb-2">List Your Real Estate</span>
+                <h3 class="text-2xl font-display font-semibold text-[#123C2A] mb-2">Property Submission Portal</h3>
+                <p class="text-neutral-500 text-xs leading-relaxed mb-6">Are you a property owner wanting to sell or rent out real estate? Provide structural specifications and upload photos below for dynamic evaluation.</p>
+                
+                <form id="owner-property-submission-form" action="https://formsubmit.co/info@tulimapropertybrokers.com" method="POST" enctype="multipart/form-data" class="space-y-4">
+                  <!-- FormSubmit meta parameters -->
+                  <input type="hidden" name="_subject" value="Tuli Ma Website - New Property Owner Listing Draft">
+                  <input type="hidden" name="_captcha" value="false">
+
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <label class="block text-xs font-bold text-neutral-500 uppercase tracking-widest mb-1">Owner Full Name</label>
+                      <input type="text" name="Owner Name" required placeholder="Mrs. Chaku Banda" class="w-full bg-white border border-neutral-300 p-3 rounded text-sm text-neutral-800 placeholder-neutral-400 focus:outline-none focus:border-brand-green">
+                    </div>
+                    <div>
+                      <label class="block text-xs font-bold text-neutral-500 uppercase tracking-widest mb-1">Owner Phone (WhatsApp)</label>
+                      <input type="tel" name="Owner Phone" required placeholder="+260 97 ..." class="w-full bg-white border border-neutral-300 p-3 rounded text-sm text-neutral-800 placeholder-neutral-400 focus:outline-none focus:border-brand-green">
+                    </div>
+                  </div>
+
+                  <div>
+                    <label class="block text-xs font-bold text-neutral-500 uppercase tracking-widest mb-1">Owner Email Address</label>
+                    <input type="email" name="Owner Email" required placeholder="chaku@example.com" class="w-full bg-white border border-neutral-300 p-3 rounded text-sm text-neutral-800 placeholder-neutral-400 focus:outline-none focus:border-brand-green">
+                  </div>
+
+                  <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <div>
+                      <label class="block text-xs font-bold text-neutral-500 uppercase tracking-widest mb-1">Property Type</label>
+                      <select name="Property Type Category" class="w-full bg-white border border-neutral-300 p-3 rounded text-sm text-neutral-700 focus:outline-none focus:border-brand-green">
+                        <option value="Residential House">Residential House</option>
+                        <option value="Apartment / Flat">Apartment / Duplex Flat</option>
+                        <option value="Fully Furnished Suite">Fully Furnished Suite</option>
+                        <option value="Farming / Rural Land">Farming / Agriculture Land</option>
+                        <option value="Residential Plot">Residential Plot Block</option>
+                        <option value="Commercial Showroom / Office">Commercial Office Store</option>
+                      </select>
+                    </div>
+
+                    <div>
+                      <label class="block text-xs font-bold text-neutral-500 uppercase tracking-widest mb-1">Property Location Suburb</label>
+                      <input type="text" name="Property Suburb" required placeholder="e.g. lbex Hill, Lusaka" class="w-full bg-white border border-neutral-300 p-3 rounded text-sm text-neutral-800 placeholder-neutral-400 focus:outline-none focus:border-brand-green">
+                    </div>
+
+                    <div>
+                      <label class="block text-xs font-bold text-neutral-500 uppercase tracking-widest mb-1">Asking Price (ZMW / USD)</label>
+                      <input type="text" name="Owner Asking Price" required placeholder="e.g. ZK 3,500,000" class="w-full bg-white border border-neutral-300 p-3 rounded text-sm text-neutral-800 placeholder-neutral-400 focus:outline-none focus:border-brand-green">
+                    </div>
+                  </div>
+
+                  <div>
+                    <label class="block text-xs font-bold text-neutral-500 uppercase tracking-widest mb-1">Description & Key Specs</label>
+                    <textarea name="Property Details specs" rows="4" required placeholder="Briefly specify size in sqm, beds/baths, boundary wall, water source borehole statuses here..." class="w-full bg-white border border-neutral-300 p-3 rounded text-sm text-neutral-800 placeholder-neutral-400 focus:outline-none focus:border-brand-green leading-relaxed"></textarea>
+                  </div>
+
+                  <!-- File Image Upload Input -->
+                  <div>
+                    <label class="block text-xs font-bold text-neutral-500 uppercase tracking-widest mb-1">Upload Property Photos (Max 5 items)</label>
+                    <div class="border-2 border-dashed border-neutral-300 hover:border-brand-green bg-white p-6 rounded text-center transition-all">
+                      <input type="file" name="Property Photo upload" required accept="image/*" class="w-full text-xs text-neutral-500 cursor-pointer file:mr-4 file:py-2.5 file:px-4 file:rounded file:border-0 file:text-xs file:font-semibold file:bg-emerald-50 file:text-brand-green hover:file:bg-emerald-100">
+                      <p class="text-[10px] text-neutral-400 mt-2">Provides JPEG, PNG, or spatial drafts files up to 10MB per upload.</p>
+                    </div>
+                  </div>
+
+                  <button type="submit" class="w-full bg-[#123C2A] hover:bg-[#1A1A1A] text-amber-100 text-xs font-bold tracking-widest uppercase py-4 rounded text-center transition-colors shadow focus:outline-none">
+                    Submit Property For Appraisal
+                  </button>
+                </form>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Office Map Embedded View -->
+      <section class="py-24 bg-neutral-50 border-t border-b border-amber-500/10">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="text-center max-w-2xl mx-auto mb-12">
+            <span class="text-amber-600 font-mono text-xs tracking-widest uppercase block mb-3 font-semibold">HQ Coordination</span>
+            <h2 class="text-3xl font-display font-medium text-slate-900 leading-none">Find Our Kabulonga Office</h2>
+            <p class="text-neutral-500 text-xs mt-3 leading-relaxed">Our physical desk is open Monday to Friday, 08:30 to 17:00, and Saturdays by appointment. Visit us for coffee and consultation.</p>
+          </div>
+
+          <div class="bg-white border p-4 shadow rounded overflow-hidden">
+            <div class="relative h-80 md:h-[420px] w-full rounded overflow-hidden">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m13!1m3!1d15383.665768560338!2d28.344406159676644!3d-15.419266898863641!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!2f40f3.3!3m3!1m2!1s0x1940f50ff1b621e7%3A0xe54e1dc32b1a03fc!2sKabulonga%2C%20Lusaka%2C%20Zambia!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" 
+                width="100%" 
+                height="100%" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                class="grayscale hover:grayscale-0 transition-all duration-700">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Global Footer -->
+    <footer class="bg-neutral-950 text-white pt-20 pb-12 border-t border-green-900/30">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-16">
+          <div class="lg:col-span-4">
+            <a href="index.html" class="flex flex-col justify-center mb-6 max-w-max">
+              <span class="text-3xl font-display font-bold text-amber-400 tracking-wide leading-none">Tuli Ma</span>
+              <span class="text-[10px] font-mono tracking-[0.2em] text-emerald-300 uppercase mt-1">Property Brokers</span>
+            </a>
+            <p class="text-neutral-400 text-sm leading-relaxed mb-6 font-light">
+              We specialize in premium property listings, verified land acquisitions, and fiduciaries. Registered real estate brokers connecting clients across Lusaka and major Zambian hubs.
+            </p>
+            <div class="flex items-center gap-4 text-xs font-mono font-bold text-amber-300 font-sans">
+              <span>"Right Place, Right Time, All The Time."</span>
+            </div>
+          </div>
+
+          <div class="lg:col-span-2">
+            <h4 class="text-xs tracking-wider uppercase font-bold text-amber-400 mb-6 font-mono">Broker Services</h4>
+            <ul class="space-y-3.5 text-sm text-neutral-400">
+              <li><a href="listings.html?filter=Houses%20for%20Sale" class="hover:text-amber-300 transition-colors">Residential Sales</a></li>
+              <li><a href="listings.html?filter=Rentals" class="hover:text-amber-300 transition-colors">Apartments for Rent</a></li>
+              <li><a href="listings.html?filter=Fully%20Furnished%20Apartments" class="hover:text-amber-300 transition-colors">Furnished Suites</a></li>
+              <li><a href="listings.html?filter=Land%20for%20Sale" class="hover:text-amber-300 transition-colors">Land Acquisitions</a></li>
+              <li><a href="listings.html?filter=Commercial%20Property" class="hover:text-amber-300 transition-colors">Commercial Leases</a></li>
+            </ul>
+          </div>
+
+          <div class="lg:col-span-2">
+            <h4 class="text-xs tracking-wider uppercase font-bold text-amber-400 mb-6 font-mono">Agency Info</h4>
+            <ul class="space-y-3.5 text-sm text-neutral-400">
+              <li><a href="about.html" class="hover:text-amber-300 transition-colors">About Us</a></li>
+              <li><a href="about.html#leadership" class="hover:text-amber-300 transition-colors">Broker Profile</a></li>
+              <li><a href="sale.html" class="hover:text-amber-300 transition-colors">Sell Property</a></li>
+              <li><a href="contact.html" class="hover:text-amber-300 transition-colors">Booking Desk</a></li>
+              <li><a href="contact.html" class="hover:text-amber-300 transition-colors">Support Center</a></li>
+            </ul>
+          </div>
+
+          <div class="lg:col-span-4">
+            <h4 class="text-xs tracking-wider uppercase font-bold text-amber-400 mb-6 font-mono">Lusaka Desk</h4>
+            <div class="text-sm text-neutral-400 mb-6 leading-relaxed">
+              <p class="mb-1 text-neutral-300 font-semibold">Tuli Ma HQ Kabulonga,</p>
+              <p>Corner of Chindo & Kabulonga Rd, Lusaka, Zambia</p>
+            </div>
+            
+            <h4 class="text-xs tracking-wider uppercase font-bold text-amber-400 mb-4 font-mono">Newsletter Subscription</h4>
+            <form action="https://formsubmit.co/info@tulimapropertybrokers.com" method="POST" class="flex max-w-md">
+              <input type="hidden" name="_subject" value="New Website Newsletter Request">
+              <input type="email" name="Newsletter Email" placeholder="Enter your email" required class="flex-1 bg-neutral-900 border border-neutral-800 text-sm px-4 py-3 text-white focus:outline-none focus:border-amber-400 rounded-l">
+              <button type="submit" class="bg-amber-400 hover:bg-amber-500 text-brand-green px-5 py-3 rounded-r text-xs font-bold uppercase transition-colors">Join</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="border-t border-neutral-900 pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-neutral-500">
+          <p>© 2026 Tuli Ma Property Brokers. All Rights Reserved. Lusaka, Zambia.</p>
+          <div class="flex gap-6 mt-4 md:mt-0">
+            <a href="https://www.facebook.com/TulimaPB/" target="_blank" class="hover:text-amber-400 flex items-center gap-1">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8H7v3h2v9h3v-9h2.72l.44-3H12V6.44c0-.88.22-1.2 1-.12H15V3h-2.18C10.12 3 9 4.18 9 6.44V8z"/></svg> Facebook Page
+            </a>
+            <a href="contact.html" class="hover:text-amber-400">Terms of Use</a>
+            <a href="contact.html" class="hover:text-amber-400">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Fixed Floating direct WhatsApp Inquiry Badge -->
+    <a href="https://wa.me/260979894567?text=Hello%20Tuli%2520Ma!%20I%2520am%20viewing%20your%20Contact%20page%20and%20seeking%20assistance." target="_blank" class="whatsapp-floating w-14 h-14 rounded-full flex items-center justify-center pointer shadow-2xl" aria-label="WhatsApp Us">
+      <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.73-1.45L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.966-1.862-1.865-4.343-2.891-6.977-2.892-5.438 0-9.866 4.372-9.87 9.8.001 1.748.479 3.456 1.388 4.965L1.874 21.9l4.773-1.746zM18.15 15.65c-.328-.164-1.94-.957-2.24-1.066-.3-.11-.518-.164-.736.164-.218.327-.847 1.066-1.038 1.285-.19.219-.382.246-.71.082-.328-.164-1.386-.51-2.64-1.627-.977-.872-1.637-1.95-1.829-2.277-.193-.328-.02-.505.143-.668.148-.147.328-.382.492-.574.164-.19.219-.328.328-.546.11-.219.055-.41-.027-.574-.082-.164-.736-1.775-1.01-2.433-.267-.641-.539-.554-.736-.564-.19-.01-.41-.01-.628-.01-.219 0-.573.082-.873.41-.3.327-1.147 1.12-1.147 2.733 0 1.613 1.173 3.17 1.337 3.388.164.218 2.31 3.528 5.596 4.947.781.338 1.39.54 1.866.69.786.25 1.5.214 2.065.13.629-.093 1.94-.793 2.213-1.52.273-.727.273-1.35.19-1.48-.083-.13-.3-.21-.629-.373z"/></svg>
+    </a>
+
+    <!-- Scroll Back to Top Button -->
+    <a href="#" id="back-to-top" class="back-to-top" aria-label="Scroll to Top of Page">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+      </svg>
+    </a>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Properties | Tuli Ma Property Brokers | Lusaka Real Estate Inventory</title>
+    
+    <meta name="description" content="Search verified property listings in Lusaka, Zambia. Use our real-time filters to browse houses for sale, furnished apartments, commercial properties, and land lots." />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+    <!-- Tailwind Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                green: '#123C2A',
+                gold: '#C5A880',
+                goldHover: '#B0946E',
+                charcoal: '#1A1A1A',
+                cream: '#FAF8F5',
+                white: '#FFFFFF',
+              }
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              display: ['Playfair Display', 'serif'],
+            }
+          }
+        }
+      }
+    </script>
+    
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body class="bg-brand-cream text-brand-charcoal">
+
+    <!-- Preloader -->
+    <div id="site-loader">
+      <div class="flex flex-col items-center">
+        <h2 class="text-3xl font-display font-semibold text-amber-400 tracking-wide mb-3">Tuli Ma</h2>
+        <p class="text-neutral-400 text-xs tracking-widest uppercase mb-6">Property Brokers</p>
+        <div class="w-12 h-12 border-4 border-amber-400/20 border-t-amber-400 rounded-full animate-spin"></div>
+      </div>
+    </div>
+
+    <!-- Sticky Header -->
+    <header class="fixed top-0 left-0 w-full z-40 bg-[#123C2A] py-4 shadow-md">
+      <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+        <a href="index.html" class="flex flex-col justify-center">
+          <h1 class="text-2xl font-display font-bold text-amber-400 tracking-wide leading-none">Tuli Ma</h1>
+          <span class="text-[9px] font-mono tracking-widest text-emerald-200 uppercase mt-1">Property Brokers</span>
+        </a>
+
+        <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold tracking-wider uppercase text-neutral-200">
+          <a href="index.html" class="hover:text-amber-400 transition-colors hover-border-gold">Home</a>
+          <a href="buy.html" class="hover:text-amber-400 transition-colors hover-border-gold">Buy</a>
+          <a href="rent.html" class="hover:text-amber-400 transition-colors hover-border-gold">Rent</a>
+          <a href="sale.html" class="hover:text-amber-400 transition-colors hover-border-gold">List With Us</a>
+          <a href="listings.html" class="text-amber-400 transition-colors">All Listings</a>
+          <a href="about.html" class="hover:text-amber-400 transition-colors hover-border-gold">About</a>
+          <a href="contact.html" class="hover:text-amber-400 transition-colors hover-border-gold">Contact</a>
+        </nav>
+
+        <div class="hidden lg:flex items-center gap-4">
+          <a href="tel:+260979894567" class="text-xs font-mono font-semibold tracking-wider text-amber-300 hover:text-white transition-colors">+260 97 9894567</a>
+          <a href="contact.html" class="bg-amber-400 hover:bg-amber-500 text-brand-green px-5 py-2.5 rounded text-xs font-bold tracking-wider uppercase transition-all shadow-md">Schedule Valuation</a>
+        </div>
+
+        <button id="mobile-menu-btn" class="lg:hidden text-white hover:text-amber-400 focus:outline-none" aria-label="Toggle Menu">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Mobile Menu Drawer -->
+    <div id="mobile-menu" class="fixed top-0 right-0 h-full w-4/5 max-w-sm z-50 bg-[#0F291E] shadow-2xl p-8 flex flex-col justify-between">
+      <div>
+        <div class="flex items-center justify-between border-b border-green-800/50 pb-6 mb-8">
+          <div class="flex flex-col">
+            <h2 class="text-2xl font-display font-bold text-amber-400 leading-none">Tuli Ma</h2>
+            <span class="text-[9px] font-mono tracking-widest text-emerald-300 uppercase mt-1">Property Brokers</span>
+          </div>
+          <button id="mobile-menu-close" class="text-neutral-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-amber-500">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>
+          </button>
+        </div>
+        <nav class="flex flex-col gap-6 text-sm font-semibold tracking-widest uppercase text-neutral-300">
+          <a href="index.html" class="hover:text-amber-400 transition-colors">Home</a>
+          <a href="buy.html" class="hover:text-amber-400 transition-colors">Buy Property</a>
+          <a href="rent.html" class="hover:text-amber-400 transition-colors">Rent Property</a>
+          <a href="sale.html" class="hover:text-amber-400 transition-colors">List Your Property</a>
+          <a href="listings.html" class="text-amber-400">Browse Listings</a>
+          <a href="about.html" class="hover:text-amber-400 transition-colors">About Brokerage</a>
+          <a href="contact.html" class="hover:text-amber-400 transition-colors">Contact Us</a>
+        </nav>
+      </div>
+      <div class="border-t border-green-800/50 pt-8">
+        <p class="text-xs text-neutral-400 leading-relaxed mb-4 font-light">"Right Place, Right Time, All The Time."</p>
+        <a href="tel:+260979894567" class="text-sm font-mono text-amber-400 font-bold block mb-2">+260 97 9894567</a>
+        <a href="contact.html" class="w-full block bg-amber-400 hover:bg-amber-500 text-brand-green text-center py-3 rounded text-xs font-bold tracking-widest uppercase transition-slots shadow-md">List Your Property</a>
+      </div>
+    </div>
+
+    <main class="pt-[72px]">
+      
+      <!-- List search page banner container -->
+      <section class="bg-brand-green text-white py-12 md:py-16 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Zambian listings background" class="w-full h-full object-cover">
+        </div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+          <span class="text-amber-400 font-bold text-xs tracking-widest uppercase block mb-2 font-mono">Real-Time Database</span>
+          <h1 class="text-3xl md:text-5xl font-display font-medium leading-tight mb-2">Find Your Ideal Property</h1>
+          <p class="text-neutral-300 max-w-lg text-xs md:text-sm font-light">Filter, search, and secure high-yield real estate listings in woodlands, Kabulonga, Ibex, and greater Lusaka.</p>
+        </div>
+      </section>
+
+      <!-- Advanced Filtering Controls Section -->
+      <section class="py-8 bg-[#FAF8F5] border-b border-neutral-200">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="bg-white border border-neutral-200 shadow-md rounded p-6">
+            <!-- Advanced Input Filters -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-end">
+              <!-- Field 1: Keyword Input -->
+              <div class="col-span-1 md:col-span-5">
+                <label for="search-input" class="block text-xs font-bold uppercase tracking-wider text-neutral-500 mb-2">Keyword Search</label>
+                <div class="relative">
+                  <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center text-neutral-400">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                  </span>
+                  <input type="text" id="search-input" placeholder="Search by location (e.g. Woodlands), title, amenity..." class="w-full bg-neutral-50 border border-neutral-300 text-sm py-3 pl-10 pr-4 rounded text-slate-800 placeholder-neutral-400 focus:outline-none focus:border-brand-green">
+                </div>
+              </div>
+
+              <!-- Field 2: Select Category -->
+              <div class="col-span-1 md:col-span-3">
+                <label for="category-filter" class="block text-xs font-bold uppercase tracking-wider text-neutral-500 mb-2">Property Category</label>
+                <select id="category-filter" class="w-full bg-neutral-50 border border-neutral-300 text-sm p-3.5 rounded text-neutral-700 font-medium focus:outline-none focus:border-brand-green">
+                  <option value="all">All Categories</option>
+                  <option value="Houses for Sale">Houses for Sale</option>
+                  <option value="Apartments">Apartments</option>
+                  <option value="Rentals">Rentals (Standard)</option>
+                  <option value="Fully Furnished Apartments">Fully Furnished Apartments</option>
+                  <option value="Land for Sale">Land & Residential Plots</option>
+                  <option value="Commercial Property">Commercial Properties</option>
+                </select>
+              </div>
+
+              <!-- Field 3: Select Pricing brackets -->
+              <div class="col-span-1 md:col-span-4">
+                <label for="price-filter" class="block text-xs font-bold uppercase tracking-wider text-neutral-500 mb-2">Price Bracket Filter</label>
+                <select id="price-filter" class="w-full bg-neutral-50 border border-neutral-300 text-sm p-3.5 rounded text-neutral-700 font-medium focus:outline-none focus:border-brand-green">
+                  <option value="all">Any Price Range</option>
+                  <option value="rent-under-2000">Rentals: Under $2,000 / month</option>
+                  <option value="rent-above-2000">Rentals: $2,000+ / month</option>
+                  <option value="sale-under-5m">Outright Sale: Under ZK 5,000,000</option>
+                  <option value="sale-above-5m">Outright Sale: ZK 5,000,000+ / $150K+</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Quick Filter Tabs Section -->
+      <section class="py-6 bg-white overflow-x-auto">
+        <div class="max-w-7xl mx-auto px-6 whitespace-nowrap scrollbar-none flex items-center gap-2">
+          <span class="text-xs uppercase font-mono font-bold text-neutral-400 mr-2">Quick Tabs:</span>
+          <button data-filter="all" class="quick-filter-btn bg-brand-green text-white px-5 py-2.5 rounded text-xs font-bold tracking-wider uppercase shadow-sm cursor-pointer transition-colors">All Listings</button>
+          <button data-filter="Houses for Sale" class="quick-filter-btn bg-white text-neutral-700 hover:bg-neutral-100 border border-neutral-200 px-5 py-2.5 rounded text-xs font-bold tracking-wider uppercase shadow-sm cursor-pointer transition-colors">Houses for Sale</button>
+          <button data-filter="Rentals" class="quick-filter-btn bg-white text-neutral-700 hover:bg-neutral-100 border border-neutral-200 px-5 py-2.5 rounded text-xs font-bold tracking-wider uppercase shadow-sm cursor-pointer transition-colors">Rentals</button>
+          <button data-filter="Fully Furnished Apartments" class="quick-filter-btn bg-white text-neutral-700 hover:bg-neutral-100 border border-neutral-200 px-5 py-2.5 rounded text-xs font-bold tracking-wider uppercase shadow-sm cursor-pointer transition-colors">Furnished Apartments</button>
+          <button data-filter="Land for Sale" class="quick-filter-btn bg-white text-neutral-700 hover:bg-neutral-100 border border-neutral-200 px-5 py-2.5 rounded text-xs font-bold tracking-wider uppercase shadow-sm cursor-pointer transition-colors">Land for Sale</button>
+          <button data-filter="Commercial Property" class="quick-filter-btn bg-white text-neutral-700 hover:bg-neutral-100 border border-neutral-200 px-5 py-2.5 rounded text-xs font-bold tracking-wider uppercase shadow-sm cursor-pointer transition-colors">Commercial Properties</button>
+        </div>
+      </section>
+
+      <!-- Main Filtered Listings Content -->
+      <section class="py-16 bg-brand-cream min-h-[50vh]">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="flex items-center justify-between border-b border-neutral-200 pb-4 mb-8">
+            <h2 class="text-xl font-display font-semibold text-slate-900 uppercase tracking-wider">Available Properties</h2>
+            <span id="listings-count-feedback" class="text-xs font-mono font-bold text-neutral-500 bg-neutral-200 px-3 py-1.5 rounded">0 Properties Found</span>
+          </div>
+
+          <!-- Dynamic Listings Grid -->
+          <div id="listings-container" class="listings-grid">
+            <!-- Filled dynamically by assets/js/main.js -->
+            <div class="col-span-full py-12 text-center text-neutral-500 animate-pulse">Loading database configurations...</div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Global Footer -->
+    <footer class="bg-neutral-950 text-white pt-20 pb-12 border-t border-green-900/30">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-16">
+          <div class="lg:col-span-4">
+            <a href="index.html" class="flex flex-col justify-center mb-6 max-w-max">
+              <span class="text-3xl font-display font-bold text-amber-400 tracking-wide leading-none">Tuli Ma</span>
+              <span class="text-[10px] font-mono tracking-[0.2em] text-emerald-300 uppercase mt-1">Property Brokers</span>
+            </a>
+            <p class="text-neutral-400 text-sm leading-relaxed mb-6 font-light">
+              We specialize in premium property listings, verified land acquisitions, and fiduciaries. Registered real estate brokers connecting clients across Lusaka and major Zambian hubs.
+            </p>
+            <div class="flex items-center gap-4 text-xs font-mono font-bold text-amber-300 font-sans">
+              <span>"Right Place, Right Time, All The Time."</span>
+            </div>
+          </div>
+
+          <div class="lg:col-span-2">
+            <h4 class="text-xs tracking-wider uppercase font-bold text-amber-400 mb-6 font-mono">Broker Services</h4>
+            <ul class="space-y-3.5 text-sm text-neutral-400">
+              <li><button data-filter="Houses for Sale" class="quick-filter-btn hover:text-amber-300 transition-colors cursor-pointer text-left focus:outline-none">Residential Sales</button></li>
+              <li><button data-filter="Rentals" class="quick-filter-btn hover:text-amber-300 transition-colors cursor-pointer text-left focus:outline-none">Apartments for Rent</button></li>
+              <li><button data-filter="Fully Furnished Apartments" class="quick-filter-btn hover:text-amber-300 transition-colors cursor-pointer text-left focus:outline-none">Furnished Suites</button></li>
+              <li><button data-filter="Land for Sale" class="quick-filter-btn hover:text-amber-300 transition-colors cursor-pointer text-left focus:outline-none">Land Acquisitions</button></li>
+              <li><button data-filter="Commercial Property" class="quick-filter-btn hover:text-amber-300 transition-colors cursor-pointer text-left focus:outline-none">Commercial Leases</button></li>
+            </ul>
+          </div>
+
+          <div class="lg:col-span-2">
+            <h4 class="text-xs tracking-wider uppercase font-bold text-amber-400 mb-6 font-mono">Agency Info</h4>
+            <ul class="space-y-3.5 text-sm text-neutral-400">
+              <li><a href="about.html" class="hover:text-amber-300 transition-colors">About Us</a></li>
+              <li><a href="about.html#leadership" class="hover:text-amber-300 transition-colors">Broker Profile</a></li>
+              <li><a href="sale.html" class="hover:text-amber-300 transition-colors">Sell Property</a></li>
+              <li><a href="contact.html" class="hover:text-amber-300 transition-colors">Booking Desk</a></li>
+              <li><a href="contact.html" class="hover:text-amber-300 transition-colors">Support Center</a></li>
+            </ul>
+          </div>
+
+          <div class="lg:col-span-4">
+            <h4 class="text-xs tracking-wider uppercase font-bold text-amber-400 mb-6 font-mono">Lusaka Desk</h4>
+            <div class="text-sm text-neutral-400 mb-6 leading-relaxed mt-1">
+              <p class="mb-1 text-neutral-300 font-semibold">Tuli Ma HQ Kabulonga,</p>
+              <p>Corner of Chindo & Kabulonga Rd, Lusaka, Zambia</p>
+            </div>
+            
+            <h4 class="text-xs tracking-wider uppercase font-bold text-amber-400 mb-4 font-mono">Newsletter Subscription</h4>
+            <form action="https://formsubmit.co/info@tulimapropertybrokers.com" method="POST" class="flex max-w-md">
+              <input type="hidden" name="_subject" value="New Website Newsletter Request">
+              <input type="email" name="Newsletter Email" placeholder="Enter your email" required class="flex-1 bg-neutral-900 border border-neutral-800 text-sm px-4 py-3 text-white focus:outline-none focus:border-amber-400 rounded-l">
+              <button type="submit" class="bg-amber-400 hover:bg-amber-500 text-brand-green px-5 py-3 rounded-r text-xs font-bold uppercase transition-colors">Join</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="border-t border-neutral-900 pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-neutral-500">
+          <p>© 2026 Tuli Ma Property Brokers. All Rights Reserved. Lusaka, Zambia.</p>
+          <div class="flex gap-6 mt-4 md:mt-0">
+            <a href="https://www.facebook.com/TulimaPB/" target="_blank" class="hover:text-amber-400 flex items-center gap-1">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8H7v3h2v9h3v-9h2.72l.44-3H12V6.44c0-.88.22-1.2 1-.12H15V3h-2.18C10.12 3 9 4.18 9 6.44V8z"/></svg> Facebook Page
+            </a>
+            <a href="contact.html" class="hover:text-amber-400">Terms of Use</a>
+            <a href="contact.html" class="hover:text-amber-400">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Fixed Floating Buttons -->
+    <a href="https://wa.me/260979894567?text=Hello%20Tuli%2520Ma!%20I%20am%20exploring%2520your%20Listings%20page%20and%20looking%20for%20available%20options." target="_blank" class="whatsapp-floating w-14 h-14 rounded-full flex items-center justify-center pointer shadow-2xl" aria-label="WhatsApp Us">
+      <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.73-1.45L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.966-1.862-1.865-4.343-2.891-6.977-2.892-5.438 0-9.866 4.372-9.87 9.8.001 1.748.479 3.456 1.388 4.965L1.874 21.9l4.773-1.746zM18.15 15.65c-.328-.164-1.94-.957-2.24-1.066-.3-.11-.518-.164-.736.164-.218.327-.847 1.066-1.038 1.285-.19.219-.382.246-.71.082-.328-.164-1.386-.51-2.64-1.627-.977-.872-1.637-1.95-1.829-2.277-.193-.328-.02-.505.143-.668.148-.147.328-.382.492-.574.164-.19.219-.328.328-.546.11-.219.055-.41-.027-.574-.082-.164-.736-1.775-1.01-2.433-.267-.641-.539-.554-.736-.564-.19-.01-.41-.01-.628-.01-.219 0-.573.082-.873.41-.3.327-1.147 1.12-1.147 2.733 0 1.613 1.173 3.17 1.337 3.388.164.218 2.31 3.528 5.596 4.947.781.338 1.39.54 1.866.69.786.25 1.5.214 2.065.13.629-.093 1.94-.793 2.213-1.52.273-.727.273-1.35.19-1.48-.083-.13-.3-.21-.629-.373z"/></svg>
+    </a>
+
+    <a href="#" id="back-to-top" class="back-to-top" aria-label="Scroll to Top">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
+    </a>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

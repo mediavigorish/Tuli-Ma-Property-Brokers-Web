@@ -1,0 +1,255 @@
+/* 
+   Tuli Ma Property Brokers - Custom CSS Stylesheet
+   Luxury Modern Real Estate style with Deep Green, Gold, Charcoal, and Cream accents.
+*/
+
+/* Custom Fonts & Variable Configuration */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  --color-green: #123C2A;
+  --color-gold: #C5A880;
+  --color-gold-hover: #B0946E;
+  --color-charcoal: #1A1A1A;
+  --color-cream: #FAF8F5;
+  --color-white: #FFFFFF;
+  --font-display: 'Playfair Display', serif;
+  --font-sans: 'Inter', sans-serif;
+  --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Base Styles & Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+}
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-charcoal);
+  overflow-x: hidden;
+}
+
+/* Custom Typography Helper Classes */
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* Header & Sticky Nav Effects */
+header {
+  transition: var(--transition-smooth);
+}
+
+header.scrolled {
+  background-color: rgba(18, 60, 42, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F1F1F1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-green);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gold);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Stagger animation helpers */
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+
+/* Glowing Gold Text Accent */
+.brand-gradient-text {
+  background: linear-gradient(135deg, #D4AF37 0%, #F3E5AB 50%, #C5A880 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Luxury Card Effect */
+.luxury-card {
+  background: var(--color-white);
+  border: 1px solid rgba(197, 168, 128, 0.15);
+  transition: var(--transition-smooth);
+}
+
+.luxury-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--color-gold);
+  box-shadow: 0 20px 40px rgba(18, 60, 42, 0.08);
+}
+
+/* Featured Badge */
+.badge-gold {
+  background: linear-gradient(135deg, var(--color-gold) 0%, #E8D3A7 100%);
+  color: var(--color-charcoal);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+/* Hover Accent Borders */
+.hover-border-gold {
+  position: relative;
+}
+
+.hover-border-gold::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-gold);
+  transition: var(--transition-smooth);
+}
+
+.hover-border-gold:hover::after {
+  width: 100%;
+}
+
+/* Direct Contact Buttons */
+.whatsapp-floating {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 50;
+  background-color: #25D366;
+  color: white;
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.3);
+  transition: var(--transition-smooth);
+}
+
+.whatsapp-floating:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 12px 30px rgba(37, 211, 102, 0.45);
+}
+
+/* Back To Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  left: 2rem;
+  z-index: 50;
+  background-color: var(--color-green);
+  color: var(--color-gold);
+  border: 1px solid var(--color-gold);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition-smooth);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.back-to-top:hover {
+  background-color: var(--color-gold);
+  color: var(--color-green);
+  transform: translateY(-5px);
+}
+
+/* Mobile Menu Slide */
+#mobile-menu {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateX(100%);
+}
+
+#mobile-menu.open {
+  transform: translateX(0);
+}
+
+/* Loader Styles */
+#site-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-green);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+}
+
+#site-loader.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Custom grid for listings */
+.listings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+/* Carousel/Testimonials */
+.testimonial-slide {
+  opacity: 0;
+  display: none;
+  transition: opacity 0.5s ease;
+}
+
+.testimonial-slide.active {
+  opacity: 1;
+  display: block;
+}

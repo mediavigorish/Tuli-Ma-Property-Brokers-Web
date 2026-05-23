@@ -1,0 +1,6 @@
+{
+  "name": "Tuli Ma Property Brokers",
+  "description": "Zambian real estate brokerage company specializing in residential and commercial properties in Lusaka.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

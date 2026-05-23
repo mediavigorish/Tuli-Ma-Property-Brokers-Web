@@ -1,0 +1,652 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tuli Ma Property Brokers | Luxury Real Estate in Lusaka, Zambia</title>
+    
+    <!-- Meta Descriptions for SEO -->
+    <meta name="description" content="Tuli Ma Property Brokers specializes in matching premium real estate buyers, sellers, and renters across Lusaka, Zambia. Explore lands, furnished apartments, houses, and commercial property listings." />
+    <meta name="keywords" content="Real Estate Zambia, Tuli Ma Property Brokers, Houses for sale Lusaka, Apartments for Rent Lusaka, Land for Sale Zambia, Furnished Apartments Lusaka" />
+    <meta name="author" content="Tuli Ma Property Brokers" />
+
+    <!-- Open Graph (Facebook / LinkedIn) / Meta tags -->
+    <meta property="og:title" content="Tuli Ma Property Brokers | Right Place, Right Time, All The Time." />
+    <meta property="og:description" content="We match buyers, sellers, and renters with premium properties in Lusaka and other regions of Zambia. Discover our listings today." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.facebook.com/TulimaPB/" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" />
+
+    <!-- Favicon Support -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="shortcut icon" href="favicon.ico" />
+
+    <!-- Tailwind Play CDN for high performance static delivery -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                green: '#123C2A', // Deep green
+                gold: '#C5A880',  // Muted gold
+                goldHover: '#B0946E',
+                charcoal: '#1A1A1A', // Slate charcoal
+                cream: '#FAF8F5',  // Off-white / cream
+                white: '#FFFFFF',
+              }
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              display: ['Playfair Display', 'serif'],
+            }
+          }
+        }
+      }
+    </script>
+    
+    <!-- Custom Style Overrides & Animations -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body class="bg-brand-cream text-brand-charcoal">
+
+    <!-- Screen Preloader -->
+    <div id="site-loader">
+      <div class="flex flex-col items-center">
+        <h2 class="text-3xl font-display font-semibold text-amber-400 tracking-wide mb-3">Tuli Ma</h2>
+        <p class="text-neutral-400 text-xs tracking-widest uppercase mb-6">Property Brokers</p>
+        <div class="w-12 h-12 border-4 border-amber-400/20 border-t-amber-400 rounded-full animate-spin"></div>
+      </div>
+    </div>
+
+    <!-- Sticky Navigation Header -->
+    <header class="fixed top-0 left-0 w-full z-40 bg-[#123C2A]/90 backdrop-blur-md py-4 transition-all duration-300">
+      <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+        <!-- Brand Logo -->
+        <a href="index.html" class="flex flex-col justify-center select-none" id="nav-brand-logo">
+          <h1 class="text-2xl font-display font-bold text-amber-400 tracking-wide leading-none">Tuli Ma</h1>
+          <span class="text-[9px] font-mono tracking-widest text-emerald-200 uppercase mt-1">Property Brokers</span>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold tracking-wider uppercase text-neutral-200">
+          <a href="index.html" class="text-amber-400 transition-colors">Home</a>
+          <a href="buy.html" class="hover:text-amber-400 transition-colors hover-border-gold">Buy</a>
+          <a href="rent.html" class="hover:text-amber-400 transition-colors hover-border-gold">Rent</a>
+          <a href="sale.html" class="hover:text-amber-400 transition-colors hover-border-gold">List With Us</a>
+          <a href="listings.html" class="hover:text-amber-400 transition-colors hover-border-gold">All Listings</a>
+          <a href="about.html" class="hover:text-amber-400 transition-colors hover-border-gold">About</a>
+          <a href="contact.html" class="hover:text-amber-400 transition-colors hover-border-gold">Contact</a>
+        </nav>
+
+        <!-- CTA Action Call Phone -->
+        <div class="hidden lg:flex items-center gap-4">
+          <a href="tel:+260979894567" class="text-xs font-mono font-semibold tracking-wider text-amber-300 hover:text-white transition-colors">
+            +260 97 9894567
+          </a>
+          <a href="contact.html" class="bg-amber-400 hover:bg-amber-500 text-brand-green px-5 py-2.5 rounded text-xs font-bold tracking-wider uppercase transition-all shadow-md">
+            Schedule Valuation
+          </a>
+        </div>
+
+        <!-- Mobile Menu Hamburger Trigger -->
+        <button id="mobile-menu-btn" class="lg:hidden text-white hover:text-amber-400 focus:outline-none focus:ring-2 focus:ring-amber-500 rounded p-1" aria-label="Toggle Navigation Menu">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Mobile Drawer Side Menu Overlay -->
+    <div id="mobile-menu" class="fixed top-0 right-0 h-full w-4/5 max-w-sm z-50 bg-[#0F291E] shadow-2xl p-8 flex flex-col justify-between">
+      <div>
+        <div class="flex items-center justify-between border-b border-green-800/50 pb-6 mb-8">
+          <div class="flex flex-col">
+            <h2 class="text-2xl font-display font-bold text-amber-400 leading-none">Tuli Ma</h2>
+            <span class="text-[9px] font-mono tracking-widest text-emerald-300 uppercase mt-1">Property Brokers</span>
+          </div>
+          <button id="mobile-menu-close" class="text-neutral-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-amber-500" aria-label="Close Navigation Menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+
+        <nav class="flex flex-col gap-6 text-sm font-semibold tracking-widest uppercase text-neutral-300">
+          <a href="index.html" class="text-amber-400">Home</a>
+          <a href="buy.html" class="hover:text-amber-400 transition-colors">Buy Property</a>
+          <a href="rent.html" class="hover:text-amber-400 transition-colors">Rent Property</a>
+          <a href="sale.html" class="hover:text-amber-400 transition-colors">List Your Property</a>
+          <a href="listings.html" class="hover:text-amber-400 transition-colors">Browse Listings</a>
+          <a href="about.html" class="hover:text-amber-400 transition-colors">About Brokerage</a>
+          <a href="contact.html" class="hover:text-amber-400 transition-colors">Contact Us</a>
+        </nav>
+      </div>
+
+      <div class="border-t border-green-800/50 pt-8">
+        <p class="text-xs text-neutral-400 leading-relaxed mb-4">
+          "Right Place, Right Time, All The Time."
+        </p>
+        <a href="tel:+260979894567" class="text-sm font-mono text-amber-400 font-bold block mb-2">
+          +260 97 9894567
+        </a>
+        <a href="mailto:info@tulimapropertybrokers.com" class="text-xs text-neutral-300 block mb-6 hover:underline">
+          info@tulimapropertybrokers.com
+        </a>
+        <a href="contact.html" class="w-full block bg-amber-400 hover:bg-amber-500 text-brand-green text-center py-3 rounded text-xs font-bold tracking-widest uppercase transition-all shadow-md">
+          List Your Property
+        </a>
+      </div>
+    </div>
+
+    <!-- Dynamic Hero Banner Section -->
+    <main class="pt-[72px]">
+      <section class="relative min-h-[90vh] flex items-center bg-zinc-950 overflow-hidden">
+        <!-- Animated Background Image Slider Mock -->
+        <div class="absolute inset-0 z-0">
+          <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Zambian Luxury Residence" class="w-full h-full object-cover opacity-35 animate-fade-in scale-105" loading="eager">
+          <!-- Deep gradient overlays -->
+          <div class="absolute inset-0 bg-gradient-to-r from-emerald-950/80 via-neutral-900/40 to-neutral-900/80"></div>
+          <div class="absolute inset-0 bg-gradient-to-t from-[#123C2A] via-transparent to-neutral-950/50"></div>
+        </div>
+
+        <!-- Hero Content container -->
+        <div class="max-w-7xl mx-auto px-6 w-full relative z-10 py-20 text-white flex flex-col items-start">
+          <div class="bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-semibold px-4 py-2 uppercase tracking-[0.2em] rounded-sm mb-6 animate-fade-in-up delay-100">
+            Premium Real Estate Brokerage • Lusaka
+          </div>
+          
+          <h1 class="text-4xl md:text-6xl lg:text-7xl font-display font-bold leading-[1.1] max-w-4xl tracking-tight mb-6 animate-fade-in-up delay-200">
+            Right Place, Right Time, <br/>
+            <span class="brand-gradient-text">All The Time.</span>
+          </h1>
+          
+          <p class="text-lg md:text-xl text-neutral-300 max-w-2xl leading-relaxed mb-10 font-light animate-fade-in-up delay-300">
+            Tuli Ma Property Brokers is Lusaka's premier boutique agency. We specialize in seamless house sales, commercial listings, luxury furnished apartments, and raw land sourcing across Zambia.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto animate-fade-in-up delay-400">
+            <a href="listings.html" class="bg-amber-400 hover:bg-amber-500 text-brand-green px-8 py-4 rounded text-sm font-bold tracking-widest uppercase transition-all shadow-lg text-center">
+              Explore Our Listings
+            </a>
+            <a href="sale.html" class="border border-white/80 hover:bg-white hover:text-brand-green text-white px-8 py-4 rounded text-sm font-bold tracking-widest uppercase transition-all text-center">
+              List Your Property
+            </a>
+          </div>
+
+          <!-- Mini Action Blocks -->
+          <div class="mt-16 grid grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-3xl animate-fade-in-up delay-400 opacity-90">
+            <a href="buy.html" class="bg-emerald-950/50 backdrop-blur-sm p-5 border border-emerald-800/30 rounded hover:border-amber-400 transition-all flex flex-col justify-between group">
+              <span class="text-xs text-amber-400 font-bold uppercase tracking-wider mb-2">Purchase</span>
+              <span class="text-md font-semibold text-neutral-100 group-hover:text-amber-300">Buy Property & Land &rarr;</span>
+            </a>
+            <a href="rent.html" class="bg-emerald-950/50 backdrop-blur-sm p-5 border border-emerald-800/30 rounded hover:border-amber-400 transition-all flex flex-col justify-between group">
+              <span class="text-xs text-amber-400 font-bold uppercase tracking-wider mb-2">Tenancy</span>
+              <span class="text-md font-semibold text-neutral-100 group-hover:text-amber-300">Rent Home & Serviced Flts &rarr;</span>
+            </a>
+            <a href="contact.html" class="hidden lg:flex bg-emerald-950/50 backdrop-blur-sm p-5 border border-emerald-800/30 rounded hover:border-amber-400 transition-all flex-col justify-between group">
+              <span class="text-xs text-amber-400 font-bold uppercase tracking-wider mb-2">Concierge</span>
+              <span class="text-md font-semibold text-neutral-100 group-hover:text-amber-300">Bespoke Sourcing Request &rarr;</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Welcome Statement Section -->
+      <section class="py-24 bg-brand-cream border-b border-amber-500/10">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-5 relative">
+              <div class="absolute -top-4 -left-4 w-24 h-24 border-t-2 border-l-2 border-amber-400"></div>
+              <div class="absolute -bottom-4 -right-4 w-24 h-24 border-b-2 border-r-2 border-amber-400"></div>
+              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80" alt="Modern Zambian Home" class="w-full rounded relative z-10 shadow-xl" loading="lazy">
+            </div>
+            
+            <div class="lg:col-span-7">
+              <span class="text-amber-600 font-bold text-xs tracking-widest uppercase block mb-3">Welcome to Tuli Ma</span>
+              <h2 class="text-3xl md:text-5xl font-display font-medium text-slate-900 leading-tight mb-6">
+                Your Trusted Property Guide in Lusaka and Beyond
+              </h2>
+              <p class="text-neutral-700 leading-relaxed mb-6 font-light">
+                Tuli Ma Property Brokers is a certified real estate brokerage company based in Lusaka, Zambia. We serve as the vital link matching serious real estate buyers, sellers, and tenants. Our professional firm handles premier residential houses, serviced apartment rentals, raw agricultural land, and high-stakes commercial property portfolios.
+              </p>
+              <p class="text-neutral-700 leading-relaxed mb-8">
+                With a deep mastery of the Zambian economic environment, client negotiations, and customized property sourcing, we ensure you achieve the <strong>"Right Place, Right Time, All The Time."</strong>
+              </p>
+              
+              <div class="flex flex-wrap gap-8">
+                <div class="flex items-center gap-3">
+                  <div class="w-12 h-12 rounded-full bg-emerald-50 flex items-center justify-center text-brand-green border border-emerald-100">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                  </div>
+                  <div>
+                    <h4 class="text-sm font-bold text-slate-950 uppercase tracking-wider">100% Genuine Land</h4>
+                    <span class="text-xs text-neutral-500">Rigorous Title Verification</span>
+                  </div>
+                </div>
+
+                <div class="flex items-center gap-3">
+                  <div class="w-12 h-12 rounded-full bg-emerald-50 flex items-center justify-center text-brand-green border border-emerald-100">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                  </div>
+                  <div>
+                    <h4 class="text-sm font-bold text-slate-950 uppercase tracking-wider">Sharp Negotiations</h4>
+                    <span class="text-xs text-neutral-500">Expert Capital Protection</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Listings Section -->
+      <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+            <div>
+              <span class="text-amber-600 font-bold text-xs tracking-widest uppercase block mb-3">Portfolio Selection</span>
+              <h2 class="text-3xl md:text-5xl font-display font-medium text-slate-950">Featured Zambian Listings</h2>
+              <p class="text-neutral-500 mt-2 max-w-lg">Handpicked properties offering the ultimate mix of prime location, high return, and refined architecture.</p>
+            </div>
+            
+            <a href="listings.html" class="group mt-6 md:mt-0 flex items-center gap-2 text-xs font-bold tracking-widest uppercase text-brand-green hover:text-amber-600 transition-colors">
+              Browse All Listings
+              <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </a>
+          </div>
+
+          <!-- Dynamic Container for listings cards (rendered in main.js) -->
+          <div id="featured-properties-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Skeleton items while main.js executes -->
+            <div class="p-8 border border-neutral-100 rounded bg-neutral-50 animate-pulse text-center">
+              <div class="h-44 bg-neutral-200 rounded mb-4"></div>
+              <div class="h-6 bg-neutral-200 w-3/4 mx-auto mb-2"></div>
+              <div class="h-4 bg-neutral-200 w-1/2 mx-auto"></div>
+            </div>
+            <div class="p-8 border border-neutral-100 rounded bg-neutral-50 animate-pulse text-center">
+              <div class="h-44 bg-neutral-200 rounded mb-4"></div>
+              <div class="h-6 bg-neutral-200 w-3/4 mx-auto mb-2"></div>
+              <div class="h-4 bg-neutral-200 w-1/2 mx-auto"></div>
+            </div>
+            <div class="p-8 border border-neutral-100 rounded bg-neutral-50 animate-pulse text-center">
+              <div class="h-44 bg-neutral-200 rounded mb-4"></div>
+              <div class="h-6 bg-neutral-200 w-3/4 mx-auto mb-2"></div>
+              <div class="h-4 bg-neutral-200 w-1/2 mx-auto"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Section Grid -->
+      <section class="py-24 bg-neutral-50 border-t border-b border-amber-500/10">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="text-center max-w-2xl mx-auto mb-16">
+            <span class="text-amber-600 font-bold text-xs tracking-widest uppercase block mb-3">Our Core Scope</span>
+            <h2 class="text-3xl md:text-5xl font-display font-medium text-slate-950 mb-4">Real Estate Solutions</h2>
+            <p class="text-neutral-500">Comprehensive capabilities to handle transactions across commercial developments, farm blocks, luxury estates, and rental suites.</p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Service 1 -->
+            <div class="bg-white p-8 border border-neutral-200/50 hover:border-amber-400 transition-all duration-300 flex flex-col justify-between group rounded">
+              <div>
+                <div class="w-12 h-12 bg-emerald-50 text-brand-green rounded flex items-center justify-center mb-6 group-hover:bg-amber-100 group-hover:text-amber-900 transition-colors">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                </div>
+                <h3 class="text-xl font-display font-semibold mb-3 text-slate-950">Property Brokerage</h3>
+                <p class="text-sm text-neutral-600 leading-relaxed mb-6">Structuring connections between property owners and vetted buyers across premium residential pockets of Lusaka.</p>
+              </div>
+              <a href="listings.html?filter=all" class="text-xs font-bold uppercase tracking-wider text-amber-600 hover:text-brand-green flex items-center gap-1.5">Explore Portfolio &rarr;</a>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="bg-white p-8 border border-neutral-200/50 hover:border-amber-400 transition-all duration-300 flex flex-col justify-between group rounded">
+              <div>
+                <div class="w-12 h-12 bg-emerald-50 text-brand-green rounded flex items-center justify-center mb-6 group-hover:bg-amber-100 group-hover:text-amber-900 transition-colors">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                </div>
+                <h3 class="text-xl font-display font-semibold mb-3 text-slate-950">House Sales</h3>
+                <p class="text-sm text-neutral-600 leading-relaxed mb-6">Complete strategic listing campaigns, private viewings, title auditing, and legal closings for premium villas and family homes.</p>
+              </div>
+              <a href="buy.html" class="text-xs font-bold uppercase tracking-wider text-amber-600 hover:text-brand-green flex items-center gap-1.5">View Houses For Sale &rarr;</a>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="bg-white p-8 border border-neutral-200/50 hover:border-amber-400 transition-all duration-300 flex flex-col justify-between group rounded">
+              <div>
+                <div class="w-12 h-12 bg-emerald-50 text-brand-green rounded flex items-center justify-center mb-6 group-hover:bg-amber-100 group-hover:text-amber-900 transition-colors">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                </div>
+                <h3 class="text-xl font-display font-semibold mb-3 text-slate-950">Apartment Rentals</h3>
+                <p class="text-sm text-neutral-600 leading-relaxed mb-6">Professional placement of private tenants and corporate personnel in modern complexes across high-security suburbs.</p>
+              </div>
+              <a href="rent.html" class="text-xs font-bold uppercase tracking-wider text-amber-600 hover:text-brand-green flex items-center gap-1.5">Browse Rental Units &rarr;</a>
+            </div>
+
+            <!-- Service 4 -->
+            <div class="bg-white p-8 border border-neutral-200/50 hover:border-amber-400 transition-all duration-300 flex flex-col justify-between group rounded">
+              <div>
+                <div class="w-12 h-12 bg-emerald-50 text-brand-green rounded flex items-center justify-center mb-6 group-hover:bg-amber-100 group-hover:text-amber-900 transition-colors">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+                </div>
+                <h3 class="text-xl font-display font-semibold mb-3 text-slate-950">Fully Furnished Apartments</h3>
+                <p class="text-sm text-neutral-600 leading-relaxed mb-6">Bespoke serviced complexes. Fully loaded premium amenities, continuous backup utility feeds, and executive management.</p>
+              </div>
+              <a href="rent.html?type=furnished" class="text-xs font-bold uppercase tracking-wider text-amber-600 hover:text-brand-green flex items-center gap-1.5">Serviced Suites &rarr;</a>
+            </div>
+
+            <!-- Service 5 -->
+            <div class="bg-white p-8 border border-neutral-200/50 hover:border-amber-400 transition-all duration-300 flex flex-col justify-between group rounded">
+              <div>
+                <div class="w-12 h-12 bg-emerald-50 text-brand-green rounded flex items-center justify-center mb-6 group-hover:bg-amber-100 group-hover:text-amber-900 transition-colors">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                </div>
+                <h3 class="text-xl font-display font-semibold mb-3 text-slate-950">Land for Sale</h3>
+                <p class="text-sm text-neutral-600 leading-relaxed mb-6">Virgin lands in Leopards Hill, Lilayi, and Chongwe. Standard boundary allocations, agricultural blocks, and commercial lots with title deeds.</p>
+              </div>
+              <a href="listings.html?filter=land" class="text-xs font-bold uppercase tracking-wider text-amber-600 hover:text-brand-green flex items-center gap-1.5">Review Raw Land &rarr;</a>
+            </div>
+
+            <!-- Service 6 -->
+            <div class="bg-white p-8 border border-neutral-200/50 hover:border-amber-400 transition-all duration-300 flex flex-col justify-between group rounded">
+              <div>
+                <div class="w-12 h-12 bg-emerald-50 text-brand-green rounded flex items-center justify-center mb-6 group-hover:bg-amber-100 group-hover:text-amber-900 transition-colors">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                </div>
+                <h3 class="text-xl font-display font-semibold mb-3 text-slate-950">Real Estate Negotiations</h3>
+                <p class="text-sm text-neutral-600 leading-relaxed mb-6">Expert fiduciary services protecting investors from premium loss, matching market values, and securing structural guarantees.</p>
+              </div>
+              <a href="about.html" class="text-xs font-bold uppercase tracking-wider text-amber-600 hover:text-brand-green flex items-center gap-1.5 font-sans">Contact Broker Chabuka &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why Choose Us Statistics / Animated Counter Banner -->
+      <section class="py-20 bg-brand-green text-white relative">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-4 border-r lg:border-r border-neutral-700/60 pr-8">
+              <span class="text-amber-300 text-xs tracking-widest uppercase font-mono block mb-3">Integrity Standard</span>
+              <h2 class="text-3xl font-display font-semibold mb-4 leading-normal">
+                Brokerage Performance
+              </h2>
+              <p class="text-neutral-400 text-sm leading-relaxed">
+                Tuli Ma Property Brokers combines decades of direct Lusaka real estate expertise with meticulous title auditing to protect client interest.
+              </p>
+            </div>
+            
+            <div class="lg:col-span-8 grid grid-cols-2 md:grid-cols-4 gap-8">
+              <div class="text-center md:text-left">
+                <div class="text-4xl md:text-5xl font-display font-bold text-amber-400 mb-2 counter-number" data-target="120" data-suffix="+">0</div>
+                <p class="text-xs text-neutral-300 tracking-wider uppercase font-semibold">Active Listings</p>
+              </div>
+              
+              <div class="text-center md:text-left">
+                <div class="text-4xl md:text-5xl font-display font-bold text-amber-400 mb-2 counter-number" data-target="500" data-suffix="+">0</div>
+                <p class="text-xs text-neutral-300 tracking-wider uppercase font-semibold">Closed Deals</p>
+              </div>
+
+              <div class="text-center md:text-left">
+                <div class="text-4xl md:text-5xl font-display font-bold text-amber-400 mb-2 counter-number" data-target="15" data-suffix="+">0</div>
+                <p class="text-xs text-neutral-300 tracking-wider uppercase font-semibold">Years Experience</p>
+              </div>
+
+              <div class="text-center md:text-left">
+                <div class="text-4xl md:text-5xl font-display font-bold text-amber-400 mb-2 counter-number" data-target="100" data-suffix="%">0</div>
+                <p class="text-xs text-neutral-300 tracking-wider uppercase font-semibold">Client Trust</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials Section -->
+      <section class="py-24 bg-brand-cream overflow-hidden">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+          <span class="text-amber-600 font-bold text-xs tracking-widest uppercase block mb-3">Client Appreciations</span>
+          <h2 class="text-3xl md:text-5xl font-display font-medium text-slate-950 mb-12">What Our Clients Say</h2>
+          
+          <!-- Slider Container -->
+          <div class="relative bg-white border border-amber-500/10 p-10 md:p-16 shadow-lg rounded">
+            <!-- Testimonial Sign design -->
+            <div class="text-brand-green text-6xl font-serif leading-none absolute top-4 left-6 opacity-10 select-none">“</div>
+            
+            <!-- Slide 1 -->
+            <div class="testimonial-slide active">
+              <p class="text-neutral-700 italic text-lg leading-relaxed mb-8">
+                "Finding secure furnished lodging for our foreign consultants was a constant hurdle until we engaged Tuli Ma. They secured three executive serviced apartments in Kabulonga in record time, complete with tight security clearance. Absolute lifesavers!"
+              </p>
+              <div>
+                <h4 class="font-bold text-slate-900 tracking-wide">Mwansa Mulenga</h4>
+                <p class="text-neutral-500 text-xs uppercase tracking-wider mt-1">HR Director, Mining Advisory Zambia</p>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="testimonial-slide">
+              <p class="text-neutral-700 italic text-lg leading-relaxed mb-8">
+                "We bought two residential plots in Lilayi through Tuli Ma Property Brokers. Finding genuine land title deeds in Lusaka is usually stressful, but Mr. Chabuka audited everything before we signed. It was incredibly transparent."
+              </p>
+              <div>
+                <h4 class="font-bold text-slate-900 tracking-wide">Dr. Charles & Maureen Bandas</h4>
+                <p class="text-neutral-500 text-xs uppercase tracking-wider mt-1">Medical Professionals & Land Investors</p>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="testimonial-slide">
+              <p class="text-neutral-700 italic text-lg leading-relaxed mb-8">
+                "Listing my woodlands commercial offices with Tuli Ma was the best choice. Their strategic digital outreach and negotiation skills connected me to three international retail businesses in under a month. Seamless and highly professional."
+              </p>
+              <div>
+                <h4 class="font-bold text-slate-900 tracking-wide">Kondwani Zulu</h4>
+                <p class="text-neutral-500 text-xs uppercase tracking-wider mt-1">Fiduciary Trustee, Property Developer</p>
+              </div>
+            </div>
+
+            <!-- Dot Navigation Indicators -->
+            <div id="carousel-dots" class="flex justify-center gap-3 mt-10"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Call to Action Banner Links -->
+      <section class="py-24 bg-zinc-900 text-white relative">
+        <div class="absolute inset-0 opacity-10">
+          <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Zambian commercial real estate grid" class="w-full h-full object-cover" loading="lazy">
+        </div>
+        <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
+          <h2 class="text-3xl md:text-5xl font-display font-medium mb-6 leading-tight">
+            Ready to Find Your <span class="brand-gradient-text">Right Place</span>?
+          </h2>
+          <p class="text-neutral-300 max-w-2xl mx-auto mb-10 text-md leading-relaxed font-light">
+            Whether buying an investment property, renting an executive duplex, or listing your land, Tuli Ma manages negotiations tightly to secure your desired yield.
+          </p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <a href="listings.html?filter=buy" class="bg-amber-400 hover:bg-amber-500 text-brand-green px-8 py-3.5 rounded text-xs font-bold tracking-widest uppercase transition-colors">
+              Buy Property
+            </a>
+            <a href="listings.html?filter=rent" class="bg-emerald-900/60 hover:bg-emerald-800 text-amber-200 border border-emerald-700/60 px-8 py-3.5 rounded text-xs font-bold tracking-widest uppercase transition-colors">
+              Rent Apartments
+            </a>
+            <a href="sale.html" class="bg-transparent border border-white/40 hover:bg-white hover:text-brand-green text-white px-8 py-3.5 rounded text-xs font-bold tracking-widest uppercase transition-colors">
+              List Your Property
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Embedded Office Map & FAQ Accordion Section -->
+      <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <!-- FAQ Accordians -->
+            <div>
+              <span class="text-amber-600 font-bold text-xs tracking-widest uppercase block mb-3">Clear Answers</span>
+              <h2 class="text-3xl md:text-4xl font-display font-medium text-slate-950 mb-10">Frequently Asked Questions</h2>
+              
+              <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <div class="faq-item border-b border-neutral-200 pb-4">
+                  <button class="faq-question w-full flex items-center justify-between text-left focus:outline-none py-2 text-slate-900 hover:text-brand-green font-medium">
+                    <span>What areas outside Lusaka do you cover?</span>
+                    <svg class="w-5 h-5 text-amber-600 transform transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg>
+                  </button>
+                  <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
+                    <p class="text-neutral-600 text-sm mt-3 leading-relaxed">
+                      While our main office is in Lusaka, we handle high-value commercial properties, agricultural farm blocks, and residential sourcing in Chongwe, Chisamba, Kafue, and prime sectors of the Zambian Copperbelt as well.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="faq-item border-b border-neutral-200 pb-4">
+                  <button class="faq-question w-full flex items-center justify-between text-left focus:outline-none py-2 text-slate-900 hover:text-brand-green font-medium">
+                    <span>How guarantees are there against fake title deeds?</span>
+                    <svg class="w-5 h-5 text-amber-600 transform transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg>
+                  </button>
+                  <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
+                    <p class="text-neutral-600 text-sm mt-3 leading-relaxed">
+                      This is our top priority. We perform rigid physical search registries at the Ministry of Lands, consult with traditional councils if handling customary land, and verify municipal approvals before listing any land.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="faq-item border-b border-neutral-200 pb-4">
+                   <button class="faq-question w-full flex items-center justify-between text-left focus:outline-none py-2 text-slate-900 hover:text-brand-green font-medium">
+                    <span>What is Tuli Ma's brokerage commission rate?</span>
+                    <svg class="w-5 h-5 text-amber-600 transform transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg>
+                  </button>
+                  <div class="faq-answer max-h-0 overflow-hidden transition-all duration-350">
+                    <p class="text-neutral-600 text-sm mt-3 leading-relaxed">
+                      Our default brokerage commission is 5% for outright properties/lands sold, and equivalent to 1 month's rent for long-term rental leases. Rates are negotiable depending on exclusivity contracts.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Modern Google Maps embed element -->
+            <div class="relative bg-brand-cream border border-neutral-200 p-4 rounded overflow-hidden shadow-md flex flex-col justify-between">
+              <div class="mb-4">
+                <span class="text-xs tracking-widest text-amber-700 uppercase font-bold block mb-1">Our Location Context</span>
+                <h4 class="font-display font-semibold text-xl text-neutral-900">Headquarters - Lusaka, Zambia</h4>
+                <p class="text-neutral-500 text-xs mt-1">Cnr Chindo & Kabulonga Rd, Kabulonga Suburb, Lusaka, Zambia</p>
+              </div>
+              
+              <!-- Map Mock / Elegant Map Frame -->
+              <div class="relative h-72 md:h-80 w-full bg-neutral-200 rounded overflow-hidden border border-neutral-300 flex items-center justify-center">
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m13!1m3!1d15383.665768560338!2d28.344406159676644!3d-15.419266898863641!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!2f40f3.3!3m3!1m2!1s0x1940f50ff1b621e7%3A0xe54e1dc32b1a03fc!2sKabulonga%2C%20Lusaka%2C%20Zambia!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" 
+                  width="100%" 
+                  height="100%" 
+                  style="border:0;" 
+                  allowfullscreen="" 
+                  loading="lazy" 
+                  referrerpolicy="no-referrer-when-downgrade" 
+                  class="grayscale hover:grayscale-0 transition-all duration-700">
+                </iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Global Footer -->
+    <footer class="bg-neutral-950 text-white pt-20 pb-12 border-t border-green-900/30">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-16">
+          
+          <!-- Column 1: Brand & Statement -->
+          <div class="lg:col-span-4">
+            <a href="index.html" class="flex flex-col justify-center mb-6 max-w-max">
+              <span class="text-3xl font-display font-bold text-amber-400 tracking-wide leading-none">Tuli Ma</span>
+              <span class="text-[10px] font-mono tracking-[0.2em] text-emerald-300 uppercase mt-1">Property Brokers</span>
+            </a>
+            <p class="text-neutral-400 text-sm leading-relaxed mb-6 font-light">
+              We specialize in premium property listings, verified land acquisitions, and fiduciaries. Registered real estate brokers connecting clients across Lusaka and major Zambian hubs.
+            </p>
+            <div class="flex items-center gap-4 text-xs font-mono font-bold text-amber-300">
+              <span>"Right Place, Right Time, All The Time."</span>
+            </div>
+          </div>
+
+          <!-- Column 2: Quick Links -->
+          <div class="lg:col-span-2">
+            <h4 class="text-xs tracking-wider uppercase font-bold text-amber-400 mb-6 font-mono">Broker Services</h4>
+            <ul class="space-y-3.5 text-sm text-neutral-400">
+              <li><a href="listings.html?filter=Houses%20for%20Sale" class="hover:text-amber-300 transition-colors">Residential Sales</a></li>
+              <li><a href="listings.html?filter=Rentals" class="hover:text-amber-300 transition-colors">Apartments for Rent</a></li>
+              <li><a href="listings.html?filter=Fully%20Furnished%20Apartments" class="hover:text-amber-300 transition-colors">Furnished Suites</a></li>
+              <li><a href="listings.html?filter=Land%20for%20Sale" class="hover:text-amber-300 transition-colors">Land Acquisitions</a></li>
+              <li><a href="listings.html?filter=Commercial%20Property" class="hover:text-amber-300 transition-colors">Commercial Leases</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Corporate Links -->
+          <div class="lg:col-span-2">
+            <h4 class="text-xs tracking-wider uppercase font-bold text-amber-400 mb-6 font-mono">Agency Info</h4>
+            <ul class="space-y-3.5 text-sm text-neutral-400">
+              <li><a href="about.html" class="hover:text-amber-300 transition-colors">About Us</a></li>
+              <li><a href="about.html#leadership" class="hover:text-amber-300 transition-colors">Broker Profile</a></li>
+              <li><a href="sale.html" class="hover:text-amber-300 transition-colors">Sell Property</a></li>
+              <li><a href="contact.html" class="hover:text-amber-300 transition-colors">Booking Desk</a></li>
+              <li><a href="contact.html" class="hover:text-amber-300 transition-colors">Support Center</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 4: Newsletter & Contact Address -->
+          <div class="lg:col-span-4">
+            <h4 class="text-xs tracking-wider uppercase font-bold text-amber-400 mb-6 font-mono">Lusaka Desk</h4>
+            <div class="text-sm text-neutral-400 mb-6 leading-relaxed">
+              <p class="mb-1 text-neutral-300 font-semibold">Tuli Ma HQ Kabulonga,</p>
+              <p>Corner of Chindo & Kabulonga Rd, Lusaka, Zambia</p>
+            </div>
+            
+            <h4 class="text-xs tracking-wider uppercase font-bold text-amber-400 mb-4 font-mono">Newsletter Subscription</h4>
+            <form action="https://formsubmit.co/info@tulimapropertybrokers.com" method="POST" class="flex max-w-md">
+              <input type="hidden" name="_subject" value="New Website Newsletter Request">
+              <input type="email" name="Newsletter Email" placeholder="Enter your email" required class="flex-1 bg-neutral-900 border border-neutral-800 text-sm px-4 py-3 text-white focus:outline-none focus:border-amber-400 rounded-l">
+              <button type="submit" class="bg-amber-400 hover:bg-amber-500 text-brand-green px-5 py-3 rounded-r text-xs font-bold uppercase transition-colors">
+                Join
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <div class="border-t border-neutral-900 pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-neutral-500">
+          <p>© 2026 Tuli Ma Property Brokers. All Rights Reserved. Lusaka, Zambia.</p>
+          <div class="flex gap-6 mt-4 md:mt-0">
+            <a href="https://www.facebook.com/TulimaPB/" target="_blank" class="hover:text-amber-400 flex items-center gap-1">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8H7v3h2v9h3v-9h2.72l.44-3H12V6.44c0-.88.22-1.2 1-.12H15V3h-2.18C10.12 3 9 4.18 9 6.44V8z"/></svg> 
+              Facebook Page
+            </a>
+            <a href="contact.html" class="hover:text-amber-400">Terms of Use</a>
+            <a href="contact.html" class="hover:text-amber-400">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Fixed Floating direct WhatsApp Inquiry Badge -->
+    <a href="https://wa.me/260979894567?text=Hello%20Tuli%20Ma%20Property%20Brokers!%2520I%20am%20inquiring%20about%20your%20current%20property%20listings." target="_blank" class="whatsapp-floating w-14 h-14 rounded-full flex items-center justify-center pointer shadow-2xl focus:outline-none" aria-label="Chat directly over WhatsApp">
+      <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.73-1.45L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.966-1.862-1.865-4.343-2.891-6.977-2.892-5.438 0-9.866 4.372-9.87 9.8.001 1.748.479 3.456 1.388 4.965L1.874 21.9l4.773-1.746zM18.15 15.65c-.328-.164-1.94-.957-2.24-1.066-.3-.11-.518-.164-.736.164-.218.327-.847 1.066-1.038 1.285-.19.219-.382.246-.71.082-.328-.164-1.386-.51-2.64-1.627-.977-.872-1.637-1.95-1.829-2.277-.193-.328-.02-.505.143-.668.148-.147.328-.382.492-.574.164-.19.219-.328.328-.546.11-.219.055-.41-.027-.574-.082-.164-.736-1.775-1.01-2.433-.267-.641-.539-.554-.736-.564-.19-.01-.41-.01-.628-.01-.219 0-.573.082-.873.41-.3.327-1.147 1.12-1.147 2.733 0 1.613 1.173 3.17 1.337 3.388.164.218 2.31 3.528 5.596 4.947.781.338 1.39.54 1.866.69.786.25 1.5.214 2.065.13.629-.093 1.94-.793 2.213-1.52.273-.727.273-1.35.19-1.48-.083-.13-.3-.21-.629-.373z"/></svg>
+    </a>
+
+    <!-- Scroll Back to Top Button -->
+    <a href="#" id="back-to-top" class="back-to-top" aria-label="Scroll to Top of Page">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+      </svg>
+    </a>
+
+    <!-- Core Main JS Script Engine representing property list state -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
